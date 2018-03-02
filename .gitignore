@@ -23,4 +23,5 @@ ccontrol.pc
 config.h
 src/utils/ccontrol
 config.h.in
-
+configure
+a.out
