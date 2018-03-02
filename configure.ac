@@ -19,8 +19,8 @@ AC_PROG_CC_C_O
 AM_PROG_CC_C_O
 AC_PROG_CC_STDC
 AC_PROG_CPP
+AM_PROG_AR
 AC_PROG_LIBTOOL
-
 # support for testing with valgrind
 AC_ARG_ENABLE(valgrind,
 [AC_HELP_STRING([--enable-valgrind],[Also valgrind on checks (default is no).])],

@@ -220,7 +220,8 @@ int colored_mmap(struct file *filp, struct vm_area_struct *vma)
 		return -EPERM;
 	}
 	vma->vm_ops = &colored_vm_ops;
-	vma->vm_flags |= VM_RESERVED | VM_CAN_NONLINEAR;
+	vma->vm_flags |= (VM_IO | VM_LOCKED | (VM_DONTEXPAND | VM_DONTDUMP));
+//vma->vm_flags |= VM_RESERVED | VM_CAN_NONLINEAR;
 	vma->vm_private_data = filp->private_data;
 	printk(KERN_INFO "ccontrol: mmap ok\n");
 	return 0;
