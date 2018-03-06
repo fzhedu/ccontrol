@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
 	assert(z!=NULL);
 	i = ccontrol_create_zone(z,&c,2*size);
 	assert(i==0);
-	t = ccontrol_malloc(z,size);
+	t = (char*) ccontrol_malloc(z,size);
 	assert(t!=NULL);
 	writes(t,accesses,size);
 
